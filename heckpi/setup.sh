@@ -10,5 +10,5 @@ sudo apt install -y python3-dev
 sudo apt install -y python3 python3-pip
 sudo apt install -y docker-compose
 git clone https://github.com/teamplayer82/ultihome.git
-cd ultihome
+cd ultihome/heckpi
 docker-compose up -d
