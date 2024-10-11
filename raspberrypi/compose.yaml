@@ -7,7 +7,7 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      - "80:80/tcp"
+      - "80:8080/tcp"
     environment:
       TZ: 'Europe/Berlin'
       WEBPASSWORD: 'Start123'
@@ -35,3 +35,10 @@ services:
       - /mnt:/mnt:z
       - /mnt2:/mnt2:z
     command: '-s "Mount;/mnt" -s "Bobs Volume;/mnt2;yes;no;no;bob" -u "samba;Start123" -p'
+  toolbox:
+    image: corentinth/it-tools
+    environment:
+      TZ: 'Europe/Berlin'
+    ports:
+      - "8080:80/tcp"
+    restart: unless-stopped
