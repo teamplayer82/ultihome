@@ -33,8 +33,8 @@ services:
     tty: true
     volumes:
       - /mnt:/mnt:z
-      - /mnt2:/mnt2:z
-    command: '-s "Mount;/mnt" -s "Bobs Volume;/mnt2;yes;no;no;bob" -u "samba;Start123" -p'
+      - /disk1:/disk1:z
+    command: '-s "SmallAndFast;/mnt;yes;no;yes" -s "BigAndSlow;/disk1;yes;no;yes" -u "smb;smb" -p'
   toolbox:
     image: corentinth/it-tools
     environment:
